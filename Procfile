@@ -1,2 +1,2 @@
 web:      bundle exec thin start -p 5050
-realtime: bin/realtime
+hook:			bin/hook ./bin/itunes-notify

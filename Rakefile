@@ -31,6 +31,18 @@ task :console do
   sh "irb -rubygems -r ./app/boot"
 end
 
+namespace :hook do
+  desc "Compile the iTunes notification hook"
+  task :compile do
+    `depends/itunes_notification_hook/hook_compile compile`
+  end
+  
+  desc "Clean a previous build"
+  task :clean do
+    `depends/itunes_notification_hook/hook_compile clean`
+  end
+end
+
 desc "Start the server"
 task :start do
   Kernel.exec "bundle exec foreman start"
