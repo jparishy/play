@@ -102,6 +102,13 @@ module Play
     rescue Appscript::CommandError
       nil
     end
+    
+    # Handle song change event.
+    #
+    #
+    def self.song_changed!
+      Realtime.update_queue_and_now_playing(now_playing, Queue.songs)
+    end
 
     # Search all songs for a given song title.
     #
