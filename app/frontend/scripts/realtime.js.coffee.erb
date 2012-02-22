@@ -5,4 +5,5 @@ channel = pusher.subscribe('now_playing_updates')
 
 channel.bind 'update_now_playing', (song) ->
 	play.renderNowPlaying(song)
-	play.renderQueue()
+	if play.currentPage == "queue"
+		play.renderQueue()

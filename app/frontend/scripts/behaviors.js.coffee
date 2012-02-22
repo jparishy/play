@@ -7,11 +7,13 @@ $(document).ready () ->
 
   # Refreshes the Queue.
   $('.queue').click () ->
+    play.currentPage = "queue"
     play.renderQueue()
     false
 
   # Loads up the History.
   $('.history').click () ->
+    play.currentPage = "history"
     updateSongs("/history", "GET")
     false
 
@@ -66,6 +68,7 @@ $(document).ready () ->
 
   # Searches things.
   $('#search').submit () ->
+    currentPage = "search_results"
     keyword = $('#search').find('input')[0].value
     updateSongs("/search?q=#{keyword}", "GET")
     false

@@ -2,6 +2,12 @@
 
 play = exports ? this
 
+#
+# We need to keep track of what's currently being viewed,
+# be it the Queue, History, Search results, etc.
+# Make it a variable of play
+play.currentPage = "queue" # We start on the queue, I guess
+
 # Update the Songs listing with, you know, songs.
 #
 # Does that.
