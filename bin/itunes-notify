@@ -1,0 +1,6 @@
+#!/usr/bin/env ruby
+
+require 'app/boot'
+
+puts "Song changed"
+Play::Player.song_changed!

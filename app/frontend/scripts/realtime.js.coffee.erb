@@ -4,5 +4,5 @@ pusher = new Pusher('<%= Play.config.pusher_key %>')
 channel = pusher.subscribe('now_playing_updates')
 
 channel.bind 'update_now_playing', (song) ->
-  play.renderNowPlaying(song)
-  play.renderQueue()
+	play.renderNowPlaying(song)
+	play.renderQueue()
