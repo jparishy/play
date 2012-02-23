@@ -130,6 +130,7 @@ $(document).ready () ->
       data:
         id: id
       success: (response) ->
+        play.renderQueue()
         alert 'added!'
     false
 
@@ -146,5 +147,6 @@ $(document).ready () ->
       data:
         id: id
       success: (response) ->
+        play.renderQueue()
         alert 'removed!'
     false
